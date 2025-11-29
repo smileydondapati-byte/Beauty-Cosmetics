@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Beauty Products</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff7fc;
+            color: #333;
+        }
+        header {
+            background: #ffb6d9;
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            background: url('https://images.unsplash.com/photo-1500835556837-99ac94a94552') center/cover no-repeat;
+            position: relative;
+        }
+        .hero h1 {
+            background: rgba(255, 182, 217, 0.7);
+            padding: 20px 40px;
+            border-radius: 10px;
+            color: white;
+            font-size: 3rem;
+        }
+        .products {
+            padding: 40px;
+            text-align: center;
+        }
+        .products h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product button {
+            margin-top: 10px;
+            background: #ff80c8;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background: #ffb6d9;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>Glow Beauty</header>
+
+<div class="hero">
+    <h1>Glow Like Never Before</h1>
+</div>
+
+<section class="products">
+    <h2>Our Featured Products</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://aqualogica.in/cdn/shop/files/1_0f552c51-fe17-4b69-9982-2e5591436a02.jpg?v=1703058895&width=600" alt="Serum" />
+            <h3>Glow Serum</h3>
+            <p>Brightens and hydrates your skin naturally.</p>
+            <button onclick="addToCart('Glow Serum')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://ik.imagekit.io/wlfr/wellness/images/products/399978-2.jpg/tr:w-3840,c-at_max,cm-pad_resize,ar-1210-700,pr-true,f-auto,q-70,l-image,i-Wellness_logo_BDwqbQao9.png,lfo-bottom_right,w-200,h-90,c-at_least,cm-pad_resize,l-end" alt="Cream" />
+            <h3>Radiance Cream</h3>
+            <p>Gives a smooth and silky finish to your skin.</p>
+            <button onclick="addToCart('Radiance Cream')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03" alt="Cleanser" />
+            <h3>Soft Cleanser</h3>
+            <p>Deep cleans and refreshes your skin.</p>
+            <button onclick="addToCart('Soft Cleanser')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/41WndRG1mGL.jpg" alt="lipstick" />
+            <h3>lipstick</h3>
+            <p>Give beauty to your lips.</p>
+            <button onclick="addToCart('lipstick')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyqpco42mjaUa-jVqrS0l3EfwpjsmkFbNHMbDoS2Me6IKbw7r_5HfySUq1SMCKQUSxClg&usqp=CAU" alt="facemask" />
+            <h3>face mask</h3>
+            <p>It gives more glow to your face.</p>
+            <button onclick="addToCart('face mask')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://www.reneecosmetics.in/cdn/shop/files/Midnight-Eyeliner_01.jpg?v=1742486855" alt="eyeliner" />
+            <h3>eyeliner</h3>
+            <p>you look like sprak.</p>
+            <button onclick="addToCart('eyeliner')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://www.dbcosmetics.com.au/cdn/shop/files/DB_Longwear_Foundation_True_Ivory_d35f857f-b737-4b4a-a735-ee3da4860b37.jpg?v=1749008214&width=2000" alt="foundation" />
+            <h3>foundation</h3>
+            <p>Its second skin to your beauty.</p>
+            <button onclick="addToCart('foundation')">Add to Cart</button>
+        </div>
+
+         <div class="product">
+            <img src="https://i.etsystatic.com/5651689/r/il/6cbaf7/622482314/il_fullxfull.622482314_iqwj.jpg" alt="nail polish" />
+            <h3>nail polish</h3>
+            <p>Life is not perfect, but your nails can be.</p>
+            <button onclick="addToCart('nail polish')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images-static.nykaa.com/media/catalog/product/2/7/274aeabRENEE00000990_1.jpg?tr=w-500" alt="mascara" />
+            <h3>mascara</h3>
+            <p>FORGET diamonds IS A GIRL'S BEST FRIENDS Mascara.</p>
+            <button onclick="addToCart('mascara')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://sdcdn.io/cl/cl_sku_645J03_3000x3000_0.jpg" alt="face powder" />
+            <h3>face powder</h3>
+            <p>BUY MORE, GLOW MORE.</p>
+            <button onclick="addToCart('face powder')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://neudeskin.com/cdn/shop/files/1_793952c5-1167-42d6-97c7-477169fb0b20.jpg?v=1754299449&width=416" alt="face toner" />
+            <h3>face toner</h3>
+            <p>Instant Freshness in One Use.</p>
+            <button onclick="addToCart('face toner')">Add to Cart</button>
+        </div>
+
+         <div class="product">
+            <img src="https://pyxis.nymag.com/v1/imgs/e2c/024/c4c8962ca2cbeea87bd1b564ad9b0b14ef-MONDAY-Haircare-Volume-Shampoo.rsquare.w600.png" alt="shampoo and conditioner" />
+            <h3>shampoo and conditioner</h3>
+            <p>For hair so Healthy, it Shines.</p>
+            <button onclick="addToCart('shampoo and conditioner')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://www.refinery29.com/images/11737790.png" alt="face wash" />
+            <h3>face wash</h3>
+            <p>Filters are great but great skin is better.</p>
+            <button onclick="addToCart('face wash')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://justhuman.co.in/cdn/shop/files/Asset14_4209927b-44c7-41bb-a725-ea1dbe0a4215.jpg?v=1711106665&width=1500" alt="hair oil" />
+            <h3>hair oil</h3>
+            <p>hair oil and care oil.</p>
+            <button onclick="addToCart('hair oil')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://thisthatbeauty.com/wp-content/uploads/2017/04/protective-fortifying-emulsion-spf-22--500x500.jpg" alt="sunscreen" />
+            <h3>sunscreen</h3>
+            <p>Block the Sun, Not the Fun!.</p>
+            <button onclick="addToCart('sunscreen')">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 Glow Beauty | All Rights Reserved
+</footer>
+
+<script>
+    function addToCart(product) {
+        alert(product + " added to cart!");
+    }
+</script>
+
+</body>
+</html>

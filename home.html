@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty & Cosmetics</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff7fb;
+        }
+        header {
+            background: #ff9ac4;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
+            color: white;
+        }
+        .btn {
+            background: #ff4f9a;
+            padding: 12px 25px;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background: #ff9ac4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beauty Glow</h1>
+        <nav>
+            <a href="login.html">login</a>
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Enhance Your Natural Beauty</h2>
+        <p>Premium cosmetics made with love.</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+    <section id="products">
+        <h2 style="text-align:center; margin-top:40px;">Our Products</h2>
+        <div class="products">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" />
+                <h3>Lip Gloss</h3>
+                <p>Shiny and long-lasting.</p>
+                <button class="btn" onclick="addToCart('Lip Gloss')">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="https://82e.com/cdn/shop/files/Ashwagandha_50ml.png?v=1738325618&width=990" />
+                <h3>Face Cream</h3>
+                <p>Soft and glowing skin.</p>
+                <button class="btn" onclick="addToCart('Face Cream')">Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="https://french-factor.com/cdn/shop/files/Artboard_2_copy_3.jpg?v=1737031260&width=770" />
+                <h3>Perfume</h3>
+                <p>Fresh floral fragrance.</p>
+                <button class="btn" onclick="addToCart('Perfume')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer>
+        <p>© 2025 Beauty Glow. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart(product) {
+            alert(product + " added to cart!");
+        }
+    </script>
+</body>
+</html>
